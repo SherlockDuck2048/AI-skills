@@ -1,3 +1,123 @@
+Prompt One-Click Optimize — User Guide
+
+1. Skill Positioning
+
+prompt-one-click-optimize is an intelligent prompt optimization skill. Its core mission: perform structured rewriting and expression upgrades on your original prompt, producing a clearer, sharper, and more executable optimized version.
+
+It does not replace your intent — it reinforces it. You say what you want; it helps you say it better.
+
+2. Core Capabilities
+
+Capability Dimension	What It Does	What Problem It Solves
+Structural Optimization	Role definition, task decomposition, output format specification	Prompt "says something but not clearly" — model understanding drifts
+Expression Optimization	Remove ambiguity, clarify boundaries, add constraints	Prompt "says something but is interpreted differently" — outputs are uncontrolled
+Effect Enhancement	Example injection, layered instructions, error handling guidance	Prompt "is clear but poorly executed" — results are low quality
+
+3. Trigger Methods
+
+Simply express the intent to optimize a prompt in conversation — no manual loading required. Typical trigger phrases:
+
+"Help me optimize this prompt"
+"One-click optimize this prompt"
+"Improve this prompt, make it more concise"
+"This prompt isn't working well, help me rewrite it"
+"Optimize this for Claude specifically"
+
+Key signal words: optimize, one-click optimize, improve, rewrite + prompt
+
+4. Optimization Workflow
+
+Upon receiving an optimization request, the skill executes the following five steps:
+
+Receive Original Prompt → Analyze Current Structure → Fill In Missing Elements → Output Optimized Version → Briefly Explain Changes
+
+Step 1: Receive Original Prompt
+The raw text provided by the user — it may be a paragraph, a structured instruction, or even a vague one-liner.
+
+Step 2: Analyze Current Structure
+Cross-reference against the "Structure Checklist" (see Section 5) to identify missing or weak elements in the original prompt.
+
+Step 3: Fill In Missing Elements
+Address each gap in priority order, ensuring every layer is properly covered.
+
+Step 4: Output Optimized Version
+Produce a complete, ready-to-use optimized prompt that preserves the original intent without deviation.
+
+Step 5: Briefly Explain Changes
+List what was added and what was improved, so the user understands not just the result but the reasoning.
+
+5. Structure Checklist (Core Framework)
+
+During optimization, check each layer below item by item — fill in whatever is missing:
+
+Layer	Element	Optimization Focus	Common Pitfall
+Role Definition	Identity / Capability	Specify the role the AI plays, including domain background and capability boundaries	"You are an assistant" — too vague, no professional anchor
+Task Description	Input / Output	Clearly define input format and expected output format	Only says "help me write" — no mention of audience, length, or style
+Constraints	Prohibitions / Limits	Explicitly state what not to do and where boundaries lie	No constraints — the model goes off the rails
+Example Injection	Few-shot	Provide 2-3 typical input-output examples	Instructions only, no examples — the model guesses the output format
+Error Handling	Edge Cases	Define how to handle problems or ambiguous inputs	On vague input, the model fabricates rather than asking for clarification
+
+6. Output Format Specification
+
+After each optimization, output in the following standardized format:
+
+## Original Prompt
+[The user's original text]
+
+## Optimized Prompt
+[The complete optimized prompt]
+
+## Optimization Notes
+- Added: [What was specifically added]
+- Improved: [What was specifically changed]
+
+7. Use Cases & Examples
+Case 1: Direct Optimization
+
+User: Help me optimize — "Write an article about AI"
+
+Optimization Focus: Missing role definition, vague task description, no constraints, no examples, no error handling → all five layers need to be filled in
+
+Case 2: Goal-Oriented Optimization
+
+User: Optimize this prompt, make it more concise
+
+Optimization Focus: Compress redundant expressions while preserving completeness — remove unnecessary qualifiers, merge instructions at the same level
+
+Case 3: Model-Specific Optimization
+
+User: Optimize this for Claude specifically
+
+Optimization Focus: Adjust instruction style for the target model's characteristics (e.g., Claude prefers XML tag structures, is more responsive to "do not" instructions, etc.)
+
+Case 4: Batch Optimization
+
+User: Optimize all 5 of these prompts for me
+
+Optimization Focus: Optimize each individually, maintain stylistic consistency, prioritize efficiency, use a uniform output format
+
+8. Optimization Principles
+
+Do not alter core intent — Optimization is reinforcement, not replacement. What the user wants to say must be expressed more precisely, not swapped for something else.
+Ready to use — The optimized prompt should be usable as-is, requiring no secondary processing.
+General-first — If no model is specified, optimize using universal best practices; if a model is specified, adapt accordingly.
+Avoid over-engineering — Longer is not better. Redundant structure dilutes core instructions. Every sentence must earn its place.
+
+9. Quick Self-Check: Does Your Prompt Need Optimization?
+
+If your prompt shows any of the following signals, it's time to trigger optimization:
+
+ AI output frequently deviates from your expectations
+ No role definition in the prompt
+ Expected output format is not specified
+ No constraints or boundaries are set
+ No examples are provided
+ Running the same prompt at different times produces very different results
+ The prompt exceeds 500 words but the core instruction is only one sentence
+
+A prompt is a contract between you and AI. Writing it well is not about pleasing the model — it's about precisely conveying your intent.
+
+
 # 提示词一键优化 — 操作指南
 
 ---
@@ -7,6 +127,8 @@
 **prompt-one-click-optimize** 是一项智能提示词优化技能，核心使命是：**对你提供的原始提示词进行结构化重写与表达升级，生成更清晰、更精准、更易执行的优化版本。**
 
 它不做意图替换，只做意图强化。你想要什么，它帮你表达得更到位。
+
+<img width="1239" height="354" alt="image" src="https://github.com/user-attachments/assets/812398ab-e386-4f3f-a32f-db5d67f43757" />
 
 ---
 
