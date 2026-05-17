@@ -1,25 +1,3 @@
-# 怎样使用该skill
-
-「ai-enablement-diagnosis」这个技能的核心功能是 AI 阻力诊断与精准干预，专门面向 Enablement（赋能团队）与员工进行 1v1 沟通的场景。
-
-## 它做什么？
-当员工在学习或采纳 AI 工具时表现迟滞，这个技能能帮你快速识别阻力类型，并输出针对性的干预方案和沟通话术。具体来说，它诊断四大阻力类型：
-- **惯性阻力**：员工习惯于既有工作方式，缺乏改变动力
-- **惰性阻力**：员工知道该学，但拖延、不愿投入精力
-- **情绪阻力**：员工对 AI 产生焦虑、恐惧（如担心被替代）
-- **抵触阻力**：员工从理念上排斥 AI，认为不靠谱或有害
-诊断完成后，它会给出个性化的干预策略和可直接使用的沟通话术，帮助 Enablement 团队有效推进员工的学习与转变。
-
-## 怎么触发它？
-适用场景非常明确——当你需要：
-**诊断某位员工的 AI 学习阻力**：描述员工的表现和沟通情况，技能会帮你定性阻力类型
-**制定干预方案：针对已识别的阻力**，生成个性化的推进策略
-**准备沟通话术**：为即将到来的 1v1 对话准备有针对性的谈话要点
-
-## 例子
-参考《AI阻力诊断案例_保险中介10年.pdf》
-
----
 # How to Use This Skill
 
 The core function of the **ai-enablement-diagnosis** skill is **AI resistance diagnosis and targeted intervention**, designed specifically for 1-on-1 communication scenarios between Enablement teams and employees.
@@ -42,6 +20,30 @@ The use cases are clearly defined—trigger this skill when you need to:
 ## Example
 Refer to *AI Resistance Diagnosis Case_10-Year Insurance Agent.pdf*.
 ---
+
+# 怎样使用该skill
+
+「ai-enablement-diagnosis」这个技能的核心功能是 AI 阻力诊断与精准干预，专门面向 Enablement（赋能团队）与员工进行 1v1 沟通的场景。
+
+## 它做什么？
+当员工在学习或采纳 AI 工具时表现迟滞，这个技能能帮你快速识别阻力类型，并输出针对性的干预方案和沟通话术。具体来说，它诊断四大阻力类型：
+- **惯性阻力**：员工习惯于既有工作方式，缺乏改变动力
+- **惰性阻力**：员工知道该学，但拖延、不愿投入精力
+- **情绪阻力**：员工对 AI 产生焦虑、恐惧（如担心被替代）
+- **抵触阻力**：员工从理念上排斥 AI，认为不靠谱或有害
+诊断完成后，它会给出个性化的干预策略和可直接使用的沟通话术，帮助 Enablement 团队有效推进员工的学习与转变。
+
+## 怎么触发它？
+适用场景非常明确——当你需要：
+**诊断某位员工的 AI 学习阻力**：描述员工的表现和沟通情况，技能会帮你定性阻力类型
+**制定干预方案：针对已识别的阻力**，生成个性化的推进策略
+**准备沟通话术**：为即将到来的 1v1 对话准备有针对性的谈话要点
+
+## 例子
+参考《AI阻力诊断案例_保险中介10年.pdf》
+
+---
+
 
 # Human Resistance: Inertia, Laziness, Emotion, and Reactance
 
