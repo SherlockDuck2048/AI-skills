@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AIR™ AI Business Case Builder</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:
+linear-gradient(135deg,#020617,#0f172a,#111827);
+color:white;
+padding:30px;
+min-height:100vh;
+}
+
+.container{
+max-width:1400px;
+margin:auto;
+}
+
+.header{
+text-align:center;
+margin-bottom:30px;
+}
+
+.header h1{
+font-size:42px;
+background:linear-gradient(90deg,#00E5FF,#7C3AED);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.header p{
+color:#94a3b8;
+margin-top:8px;
+}
+
+.layout{
+display:grid;
+grid-template-columns: 1fr 420px;
+gap:25px;
+}
+
+.section{
+background:rgba(17,24,39,.75);
+backdrop-filter:blur(14px);
+border:1px solid rgba(0,229,255,.2);
+border-radius:16px;
+padding:20px;
+margin-bottom:20px;
+
+box-shadow:
+0 0 20px rgba(0,229,255,.08),
+0 0 30px rgba(124,58,237,.05);
+}
+
+.section h2{
+color:#00E5FF;
+margin-bottom:15px;
+}
+
+.grid2{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+label{
+font-size:13px;
+color:#cbd5e1;
+display:block;
+margin-top:10px;
+margin-bottom:5px;
+}
+
+input,
+textarea{
+width:100%;
+padding:10px;
+border-radius:8px;
+border:1px solid #334155;
+background:#0f172a;
+color:white;
+}
+
+textarea{
+height:70px;
+}
+
+button{
+width:100%;
+padding:16px;
+background:
+linear-gradient(90deg,#00E5FF,#7C3AED);
+border:none;
+border-radius:12px;
+color:white;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+}
+
+button:hover{
+opacity:.9;
+}
+
+.sidebar{
+position:sticky;
+top:20px;
+height:fit-content;
+}
+
+.kpi-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-bottom:20px;
+}
+
+.kpi{
+background:rgba(15,23,42,.9);
+padding:18px;
+border-radius:12px;
+text-align:center;
+border:1px solid rgba(0,229,255,.15);
+}
+
+.kpi-title{
+font-size:12px;
+color:#94a3b8;
+}
+
+.kpi-value{
+font-size:28px;
+font-weight:bold;
+margin-top:8px;
+}
+
+.good{
+color:#22c55e;
+}
+
+.medium{
+color:#f59e0b;
+}
+
+.bad{
+color:#ef4444;
+}
+
+.summary{
+line-height:1.7;
+color:#e2e8f0;
+}
+
+.recommendation{
+padding:18px;
+border-radius:12px;
+font-size:22px;
+font-weight:bold;
+text-align:center;
+margin-bottom:20px;
+}
+
+.invest{
+background:#052e16;
+border:1px solid #22c55e;
+}
+
+.pilot{
+background:#422006;
+border:1px solid #f59e0b;
+}
+
+.reject{
+background:#450a0a;
+border:1px solid #ef4444;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+
+<h1>AIR™ AI Business Case Builder</h1>
+
+<p>
+AI Investment & Return Framework
+</p>
+
+</div>
+
+<div class="layout">
+
+<div>
+
+<div class="section">
+
+<h2>1. Use Case</h2>
+
+<label>Name</label>
+<input id="name">
+
+<label>Owner</label>
+<input id="owner">
+
+<label>Objective</label>
+<textarea id="objective"></textarea>
+
+</div>
+
+
+<div class="section">
+
+<h2>2. Activity Baseline</h2>
+
+<div class="grid2">
+
+<div>
+
+<label>Users</label>
+<input id="users" type="number" value="100">
+
+<label>Hours per Day</label>
+<input id="hours" type="number" value="1">
+
+</div>
+
+<div>
+
+<label>Working Days per Year</label>
+<input id="days" type="number" value="220">
+
+<label>Hourly Cost ($)</label>
+<input id="hourly" type="number" value="50">
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="section">
+
+<h2>3. Impact</h2>
+
+<label>Cost Saving ($)</label>
+<input id="timeReduction" type="number" value="50">
+
+<label>Risk Reduction Benefit ($)</label>
+<input id="riskBenefit" type="number" value="0">
+
+<label>Compliance Loss Avoided ($)</label>
+<input id="complianceBenefit" type="number" value="0">
+
+<label>Revenue Increase ($)</label>
+<input id="revenueBenefit" type="number" value="0">
+
+</div>
+
+
+
+<div class="section">
+
+<h2>4. Benefit Realization</h2>
+
+<label>Adoption Rate (%)</label>
+<input id="adoption" type="number" value="80">
+
+</div>
+
+
+
+<div class="section">
+
+<h2>5. Cost Structure</h2>
+
+<h3 style="color:#00E5FF;margin-bottom:10px;">CapEx (One-Time)</h3>
+
+<div class="grid2">
+
+<div>
+
+<label>Project Cost</label>
+<input id="projectCost" type="number" value="10000">
+
+<label>Implementation Cost</label>
+<input id="implementationCost" type="number" value="20000">
+
+</div>
+
+<div>
+
+<label>Infrastructure Cost</label>
+<input id="infrastructureCost" type="number" value="5000">
+
+<label>Training Cost</label>
+<input id="trainingCost" type="number" value="3000">
+
+</div>
+
+</div>
+
+
+<br>
+
+<h3 style="color:#00E5FF;margin-bottom:10px;">OpEx (Annual)</h3>
+
+<div class="grid2">
+
+<div>
+
+<label>License Cost</label>
+<input id="licenseCost" type="number" value="5000">
+
+</div>
+
+<div>
+
+<label>Maintenance Cost</label>
+<input id="maintenanceCost" type="number" value="3000">
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>6. Strategic Value</h2>
+
+<div class="grid2">
+
+<div>
+
+<label>Capability Built (1-5)</label>
+<input id="capability" type="number" min="1" max="5" value="4">
+
+<label>Platform Reuse (1-5)</label>
+<input id="reuse" type="number" min="1" max="5" value="4">
+
+</div>
+
+<div>
+
+<label>Future Use Cases (1-5)</label>
+<input id="future" type="number" min="1" max="5" value="5">
+
+<label>Strategic Alignment (1-5)</label>
+<input id="alignment" type="number" min="1" max="5" value="5">
+
+</div>
+
+</div>
+
+</div>
+
+<button onclick="calculate()">
+Generate Business Case
+</button>
+
+</div>
+
+
+<div class="sidebar">
+
+<div class="section">
+
+<h2>7. Financials(for 3 years)</h2>
+
+<div class="kpi-grid">
+
+<div class="kpi">
+<div class="kpi-title">Annual Benefit</div>
+<div class="kpi-value" id="benefit">$0</div>
+</div>
+
+<div class="kpi">
+<div class="kpi-title">CapEx</div>
+<div class="kpi-value" id="capex">$0</div>
+</div>
+
+<div class="kpi">
+<div class="kpi-title">Annual OpEx</div>
+<div class="kpi-value" id="opex">$0</div>
+</div>
+
+<div class="kpi">
+<div class="kpi-title">3 year Net Benefit</div>
+<div class="kpi-value" id="net">$0</div>
+</div>
+
+<div class="kpi">
+<div class="kpi-title">ROI</div>
+<div class="kpi-value" id="roi">0%</div>
+</div>
+
+<div class="kpi">
+<div class="kpi-title">Payback</div>
+<div class="kpi-value" id="payback">0</div>
+</div>
+
+</div>
+
+<div class="kpi" style="margin-bottom:20px;">
+<div class="kpi-title">Strategic Score</div>
+<div class="kpi-value" id="score">0/20</div>
+</div>
+
+<div id="recommendation"></div>
+
+<h2>Executive Summary</h2>
+
+<div id="summary" class="summary">
+
+Generate to view summary.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function calculate(){
+
+// --------------------
+// Activity Baseline
+// --------------------
+
+const users =
+Number(document.getElementById("users").value) || 0;
+
+const hours =
+Number(document.getElementById("hours").value) || 0;
+
+const days =
+Number(document.getElementById("days").value) || 0;
+
+const hourly =
+Number(document.getElementById("hourly").value) || 0;
+
+
+// --------------------
+// Impact
+// --------------------
+
+const timeReduction =
+Number(document.getElementById("timeReduction").value) || 0;
+
+const riskBenefit =
+Number(document.getElementById("riskBenefit").value) || 0;
+
+const complianceBenefit =
+Number(document.getElementById("complianceBenefit").value) || 0;
+
+const revenueBenefit =
+Number(document.getElementById("revenueBenefit").value) || 0;
+
+
+// --------------------
+// Realization
+// --------------------
+
+const adoption =
+(Number(document.getElementById("adoption").value) || 0) / 100;
+
+
+// --------------------
+// Cost Structure
+// --------------------
+
+const projectCost =
+Number(document.getElementById("projectCost").value) || 0;
+
+const implementationCost =
+Number(document.getElementById("implementationCost").value) || 0;
+
+const infrastructureCost =
+Number(document.getElementById("infrastructureCost").value) || 0;
+
+const trainingCost =
+Number(document.getElementById("trainingCost").value) || 0;
+
+const licenseCost =
+Number(document.getElementById("licenseCost").value) || 0;
+
+const maintenanceCost =
+Number(document.getElementById("maintenanceCost").value) || 0;
+
+
+// --------------------
+// Benefit Calculation
+// --------------------
+
+const baselineCost =
+users *
+hours *
+days *
+hourly;
+
+const productivityBenefit =
+timeReduction *
+adoption;
+
+const annualBenefit =
+productivityBenefit +
+riskBenefit +
+complianceBenefit +
+revenueBenefit;
+
+
+// --------------------
+// CapEx / OpEx
+// --------------------
+
+const capex =
+projectCost +
+implementationCost +
+infrastructureCost +
+trainingCost;
+
+const annualOpex =
+licenseCost +
+maintenanceCost;
+
+const netAnnualBenefit =
+3*annualBenefit -
+capex -
+3*annualOpex;
+
+
+// --------------------
+// ROI
+// --------------------
+
+let roi = 0;
+
+if(capex > 0){
+
+roi =
+(
+netAnnualBenefit
+/
+(capex + 3*annualOpex)
+) * 100;
+
+}
+
+
+// --------------------
+// Payback
+// --------------------
+
+let paybackText = "N/A";
+
+//if(netAnnualBenefit > 0){
+
+//const payback =
+//(capex + 3*annualOpex) /
+//(netAnnualBenefit / 36);
+
+//paybackText =
+//payback.toFixed(1) + " Months";
+
+//}
+
+
+// --------------------
+// Strategic Score
+// --------------------
+
+const strategicScore =
+(Number(document.getElementById("capability").value) || 0) +
+(Number(document.getElementById("reuse").value) || 0) +
+(Number(document.getElementById("future").value) || 0) +
+(Number(document.getElementById("alignment").value) || 0);
+
+
+// --------------------
+// KPI Display
+// --------------------
+
+document.getElementById("benefit").innerHTML =
+"$" + annualBenefit.toLocaleString();
+
+document.getElementById("capex").innerHTML =
+"$" + capex.toLocaleString();
+
+document.getElementById("opex").innerHTML =
+"$" + annualOpex.toLocaleString();
+
+document.getElementById("net").innerHTML =
+"$" + netAnnualBenefit.toLocaleString();
+
+document.getElementById("roi").innerHTML =
+roi.toFixed(1) + "%";
+
+document.getElementById("payback").innerHTML =
+paybackText;
+
+document.getElementById("score").innerHTML =
+strategicScore + "/20";
+
+
+// --------------------
+// Recommendation
+// --------------------
+
+let recommendation;
+let cssClass;
+
+if(roi > 20){
+
+recommendation = "✅ INVEST";
+cssClass = "invest";
+
+}
+else if(roi > 5){
+
+recommendation = "🟡 PILOT FIRST";
+cssClass = "pilot";
+
+}
+else{
+
+recommendation = "❌ REASSESS";
+cssClass = "reject";
+
+}
+
+document.getElementById("recommendation").innerHTML =
+`
+<div class="recommendation ${cssClass}">
+${recommendation}
+</div>
+`;
+
+
+// --------------------
+// Executive Summary
+// --------------------
+
+const useCase =
+document.getElementById("name").value || "N/A";
+
+document.getElementById("summary").innerHTML =
+`
+<b>Use Case:</b> ${useCase}<br><br>
+
+<b>Annual Benefit:</b>
+$${annualBenefit.toLocaleString()}<br>
+
+<b>Total CapEx:</b>
+$${capex.toLocaleString()}<br>
+
+<b>Annual OpEx:</b>
+$${annualOpex.toLocaleString()}<br>
+
+<b>Net Annual Benefit:</b>
+$${netAnnualBenefit.toLocaleString()}<br>
+
+<b>ROI:</b>
+${roi.toFixed(1)}%<br>
+
+<b>Payback Period:</b>
+${paybackText}<br>
+
+<b>Strategic Score:</b>
+${strategicScore}/20<br><br>
+
+<b>Recommendation:</b>
+${recommendation}
+`;
+
+}
+
+</script>
+
+</body>
+</html>
